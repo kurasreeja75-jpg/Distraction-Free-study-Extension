@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Master - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dashboard">
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <h1 class="page-title">Your Focus Dashboard</h1>
+        <p class="subtitle">Track your productivity and stay motivated</p>
+      </header>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-content">
+            <div class="stat-number" id="todayMinutes">0</div>
+            <div class="stat-label">Minutes Today</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-content">
+            <div class="stat-number" id="todaySessions">0</div>
+            <div class="stat-label">Sessions Today</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-content">
+            <div class="stat-number" id="weekMinutes">0</div>
+            <div class="stat-label">Minutes This Week</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-content">
+            <div class="stat-number" id="streak">0</div>
+            <div class="stat-label">Day Streak</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h2>Last 7 Days</h2>
+        <div class="chart-container">
+          <canvas id="weekChart"></canvas>
+        </div>
+      </div>
+
+      <div class="history-section">
+        <h2>Recent Sessions</h2>
+        <div id="sessionHistory" class="session-list">
+          <!-- Sessions will be populated here -->
+        </div>
+      </div>
+
+      <div class="actions-section">
+        <button id="clearDataBtn" class="btn btn-tertiary">
+          Clear All Data
+        </button>
+        <button id="exportBtn" class="btn btn-secondary">Export Data</button>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
